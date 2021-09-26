@@ -2,11 +2,9 @@
 """a little bot for send paom at One houre to Discord Chanell
 """
 import logging
-from datetime import datetime
 from json import loads
 from typing import AnyStr, Dict
 
-import discord
 from config import TOKEN
 from discord.ext import commands
 from requests import get
