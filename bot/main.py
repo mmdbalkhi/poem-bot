@@ -7,10 +7,9 @@ from json import loads
 from typing import AnyStr, Dict
 
 import discord
+from config import TOKEN
 from discord.ext import commands
 from requests import get
-
-from config import TOKEN
 
 bot = commands.Bot(command_prefix="/")
 
