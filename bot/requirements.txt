@@ -42,7 +42,7 @@ multidict==5.1.0
     #   yarl
 requests==2.26.0
     # via -r requirements.txt
-typing-extensions==3.10.0.2
+typing-extensions==4.2.0
     # via
     #   -r requirements.txt
     #   aiohttp
