@@ -6,7 +6,7 @@ chardet==4.0.0
 charset-normalizer==2.0.6
 discord.py==1.7.3
 idna==3.2
-multidict==5.1.0
+multidict==6.0.2
 requests==2.26.0
 typing-extensions==4.2.0
 urllib3==1.26.7
