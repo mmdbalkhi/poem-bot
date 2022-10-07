@@ -61,7 +61,7 @@ toposort==1.7
     #   pip-compile-multi
 wheel==0.37.1
     # via pip-tools
-yarl==1.7.2
+yarl==1.8.1
     # via
     #   -r requirements.txt
     #   aiohttp
