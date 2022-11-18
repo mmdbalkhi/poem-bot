@@ -5,11 +5,16 @@ import logging
 from json import loads
 from typing import AnyStr, Dict
 
-from config import TOKEN
 from discord.ext import commands
+from discord import Intents
 from requests import get
 
-bot = commands.Bot(command_prefix="/")
+TOKEN="TOKEN"
+
+intents = Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix="/", intents=intents)
+
 
 logger = logging.getLogger("discord")
 
@@ -22,7 +27,6 @@ logger.addHandler(handler)
 
 
 def get_random_poem_from_ganjoor() -> Dict:
-
     content = get("http://c.ganjoor.net/beyt-json.php").content
     json_poem = loads(content)
 
@@ -37,19 +41,10 @@ def send_poem_for_user() -> AnyStr:
     return f"{poem_poet['m1']} // {poem_poet['m2']}\n" f"{poem_poet['شاعر']}\n"
 
 
-@bot.command(name="poem")
+@bot.hybrid_command()
 async def poem(ctx):
     await ctx.send(send_poem_for_user())
 
 
-@bot.command(name="شعر")
-async def poem(ctx):
-    await ctx.send(send_poem_for_user())
-
-
-@bot.command(name="بیت")
-async def poem(ctx):
-    await ctx.send(send_poem_for_user())
-
-
-bot.run(TOKEN)
+if __name__ == "__main__":
+    bot.run(TOKEN)
