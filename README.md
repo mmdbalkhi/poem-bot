@@ -13,10 +13,6 @@ a discord bot for send Persian poems
 ------
  `/poem`
 
- `/شعر`
-
- `/بیت`
-
 چگونه بات را به سرور خود اضافه کنیم؟
 ------
 این لینک را [دنبال](https://discord.com/api/oauth2/authorize?client_id=891380730356178965&permissions=2048&scope=bot)
